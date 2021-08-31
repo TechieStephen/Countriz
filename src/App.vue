@@ -38,8 +38,21 @@ body{
   background: $VeryLightGray;
   min-height: 100vh;
 }
+button{
+  cursor: pointer;
+}
+button, select, input{
+  outline: none;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
 main{
-  background: lightblue;
-  padding: 20px 5%;
+  padding: 30px 5%;
 }
 </style>
