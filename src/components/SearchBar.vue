@@ -1,15 +1,18 @@
 <template>
   <div id="search">
     <form>
+        <img src="" alt="">
         <input type="text" placeholder="Search for a country">
     </form>
       
     <div class="dropdown">
         <button class="dropbtn">Filter by Region <span>$</span></button>
         <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <a href="#">Africa</a>
+            <a href="#">Ameriaca</a>
+            <a href="#">Asia</a>
+            <a href="#">Europe</a>
+            <a href="#">Oceania</a>
         </div>
     </div>
   </div>
@@ -32,7 +35,7 @@ export default {
 form{
     flex: 1;
     input{
-        padding: 15px;
+        padding: 20px 15px;
         display: block;
         min-width: 40%;
         box-shadow: 0px 0px 6px lightgray;
@@ -49,7 +52,7 @@ form{
 
     button{
         background: #FFFFFF;
-        padding: 15px;
+        padding: 15px 20px;
     }
 
 
@@ -68,7 +71,7 @@ form{
 
         a{
             width: 100%;
-            padding: 12px 15px;
+            padding: 8px 20px;
 
             &:hover{
                 background:hsl(0, 0%, 98%) ;
