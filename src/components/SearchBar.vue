@@ -1,12 +1,12 @@
 <template>
   <div id="search">
     <form>
-        <img src="" alt="">
+        <i class="fas fa-search"></i>
         <input type="text" placeholder="Search for a country">
     </form>
       
     <div class="dropdown">
-        <button class="dropbtn">Filter by Region <span>$</span></button>
+        <button class="dropbtn"><span>Filter by Region</span> &nbsp;<i class="fas fa-angle-down"></i></button>
         <div class="dropdown-content">
             <a href="#">Africa</a>
             <a href="#">Ameriaca</a>
@@ -33,13 +33,23 @@ export default {
 }
 
 form{
-    flex: 1;
+    width: 35%;
+    background: #FFFFFF;
+    margin-right: 20px;
+    box-shadow: 0px 0px 6px lightgray;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    border-radius: 5px;
+
     input{
-        padding: 20px 15px;
+        flex: 1;
+        padding: 15px;
         display: block;
-        min-width: 40%;
-        box-shadow: 0px 0px 6px lightgray;
-        border-radius: 4px;
+    }
+
+    i{
+        color: rgb(119, 119, 119)
     }
 }
 
@@ -48,11 +58,15 @@ form{
     font-weight: 600;
     font-size: 16px;
     box-shadow: 0px 0px 6px lightgray;
-    border-radius: 4px;
+    border-radius: 5px;
 
     button{
         background: #FFFFFF;
         padding: 15px 20px;
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
 
@@ -65,13 +79,12 @@ form{
         width: 100%;
         text-align: left;
         box-shadow: 0px 0px 6px lightgray;
-        border-radius: 4px;
-
+        border-radius: 5px;
         display: none;
 
         a{
             width: 100%;
-            padding: 8px 20px;
+            padding: 10px 20px;
 
             &:hover{
                 background:hsl(0, 0%, 98%) ;
