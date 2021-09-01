@@ -2,22 +2,22 @@
   <router-link to="/" id="back"> <i class="fas fa-arrow-left"></i> Back</router-link>
   <section>
     <div id="flag">
-      <img src="https://restcountries.eu/data/nga.svg" alt="">
+      <img :src="country.flag" alt="">
     </div>
     <div id="country-details">
-      <h1>Country Name</h1>
+      <h1>{{country.name}}</h1>
       <div id="details">
         <ul>
-          <li><b>Native Name:</b> 446, 734</li>
-          <li><b>Population:</b> 446, 734</li>
-          <li><b>Region:</b> Africa</li>
-          <li><b>Sub Region:</b> Africa</li>
-          <li><b>Capital:</b> Abuja</li>
+          <li><b>Native Name:</b> {{country.population}}</li>
+          <li><b>Population:</b> {{country.nativeName}}</li>
+          <li><b>Region:</b> {{country.region}}</li>
+          <li><b>Sub Region:</b> {{country.subregion}}</li>
+          <li><b>Capital:</b> {{country.capital}}</li>
         </ul>
         <ul>
-          <li><b>Top Level Domain:</b> 446, 734</li>
-          <li><b>Currencies:</b> Africa</li>
-          <li><b>Languages:</b> Abuja</li>
+          <li><b>Top Level Domain:</b> {{country.topLevelDomain}}</li>
+          <li><b>Currencies:</b> {{country.currencies}}</li>
+          <li><b>Languages:</b> {{country.languages}}</li>
         </ul>
       </div>
       <div id="footer">
@@ -30,7 +30,23 @@
 
 <script>
 export default {
-
+  name:'Detail',
+  // props:['code'],
+  data(){
+    return{
+      country:{},
+      code:'co'
+    }
+  },
+  mounted(){
+    fetch(`https://restcountries.eu/rest/v2/alpha/${this.code}`)
+    .then(res=>res.json())
+    .then(data=>{
+      this.country = data
+      console.log(data)
+    })
+    .catch(error=>console.log(error))
+  }
 }
 </script>
 
@@ -61,7 +77,7 @@ section{
     box-shadow: 0px 0px 6px lightgray;
   }
   #country-details{
-    width: 46%;
+    width: 48%;
 
   #details{
     display: flex;
@@ -69,7 +85,8 @@ section{
     margin: 20px 0px;
 
     ul:first-child{
-      margin-right: 15%;
+      width: 40%;
+      margin-right: 20px;
     }
   }
 

@@ -2,13 +2,13 @@
   <div class="home">
     <Search-bar/>
     <section>
-       <router-link to="/detail" v-for="n in 8" :key="n" class="card">
-         <img id="flag" src="https://restcountries.eu/data/nga.svg" alt="">
+       <router-link to="/detail" v-for="(item,index) in countries" :key="index" class="card">
+         <img id="flag" :src="item.flag" alt="">
          <ul id="details">
-           <h1>Country Name</h1>
-           <li><b>Population:</b> 446, 734</li>
-           <li><b>Region:</b> Africa</li>
-           <li><b>Capital:</b> Abuja</li>
+           <h1>{{item.name}}</h1>
+           <li><b>Population:</b> {{item.population}}</li>
+           <li><b>Region:</b> {{item.region}}</li>
+           <li><b>Capital:</b> {{item.capital}}</li>
          </ul>
        </router-link>
     </section>
@@ -32,8 +32,9 @@ export default {
     fetch('https://restcountries.eu/rest/v2/all')
     .then(res=>res.json())
     .then(data=>{
-      console.log(data)
+      this.countries = data
     })
+    .catch(error=>console.log(error))
   }
 }
 </script>
