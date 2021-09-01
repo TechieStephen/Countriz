@@ -22,7 +22,9 @@
       </div>
       <div id="footer">
         <h3>Bordered Countries:</h3>
-        <a href="" v-for="n in 3" :key="n">France</a>
+        <a href="" v-for="(item,index) in country.borders" :key="index">
+          {{item}}
+        </a>
       </div>
     </div>
   </section>
