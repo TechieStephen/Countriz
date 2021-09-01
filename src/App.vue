@@ -33,7 +33,6 @@ body{
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   background: $VeryLightGray;
   min-height: 100vh;
@@ -52,7 +51,13 @@ a{
   text-decoration: none;
   color: inherit;
 }
+img{
+  width: 100%;
+}
+ul{
+  list-style: none;
+}
 main{
-  padding: 30px 5%;
+  padding: 50px 5%;
 }
 </style>

@@ -6,9 +6,9 @@
          <img id="flag" src="https://restcountries.eu/data/nga.svg" alt="">
          <ul id="details">
            <h1>Country Name</h1>
-           <li>Population: 446, 734</li>
-           <li>Region: Africa</li>
-           <li>Capital: Abuja</li>
+           <li><b>Population:</b> 446, 734</li>
+           <li><b>Region:</b> Africa</li>
+           <li><b>Capital:</b> Abuja</li>
          </ul>
        </router-link>
     </section>
@@ -22,13 +22,25 @@ export default {
   name: 'Home',
   components: {
     SearchBar
+  },
+  data(){
+    return{
+      countries:[]
+    }
+  },
+  mounted(){
+    fetch('https://restcountries.eu/rest/v2/all')
+    .then(res=>res.json())
+    .then(data=>{
+      console.log(data)
+    })
   }
 }
 </script>
 
 <style scoped lang="scss">
 section{
-  margin-top: 50px;
+  margin-top: 80px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -42,14 +54,8 @@ section{
     margin-bottom: 50px;
     text-align: left;
 
-    #flag{
-      width: 100%;
-    }
-
     ul{
-      list-style: none;
       padding: 20px;
-
       h1{
         margin-bottom: 20px;
       }
