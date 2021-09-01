@@ -42,14 +42,15 @@ form{
     padding: 0px 20px;
     border-radius: 5px;
 
+    i{
+        color: rgb(119, 119, 119);
+        margin-right:5px;
+    }
+
     input{
         flex: 1;
         padding: 15px;
         display: block;
-    }
-
-    i{
-        color: rgb(119, 119, 119)
     }
 }
 
