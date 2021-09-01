@@ -2,7 +2,7 @@
   <div class="home">
     <Search-bar/>
     <section>
-       <div v-for="n in 8" :key="n" class="card">
+       <router-link to="/detail" v-for="n in 8" :key="n" class="card">
          <img id="flag" src="https://restcountries.eu/data/nga.svg" alt="">
          <ul id="details">
            <h1>Country Name</h1>
@@ -10,7 +10,7 @@
            <li>Region: Africa</li>
            <li>Capital: Abuja</li>
          </ul>
-       </div>
+       </router-link>
     </section>
   </div>
 </template>
