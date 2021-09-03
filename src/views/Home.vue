@@ -49,8 +49,6 @@ section{
   .card{
     width:23%;
     min-height: 300px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 6px lightgray;
     border-radius: 10px;
     margin-bottom: 50px;
 

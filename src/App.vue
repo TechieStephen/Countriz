@@ -74,14 +74,17 @@ ul{
 main{
   padding: 50px 5%;
 }
-
+.header,button, select, input, form, .dropdown, .dropdown-content, .card{
+  box-shadow: 0px 0px 6px lightgray;
+}
 
 .dark{
   color: $DarkModeText;
   background: $DarkModeBackground;
 
-  .header,button, select, input{
+  .header,button, select, input, form, .dropdown, .dropdown-content, .card{
     background: $DarkModeElements;
+    box-shadow: none;
   }
 }
 </style>

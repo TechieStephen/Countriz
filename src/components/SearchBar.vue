@@ -34,9 +34,7 @@ export default {
 
 form{
     width: 35%;
-    background: inherit;
     margin-right: 20px;
-    box-shadow: 0px 0px 6px lightgray;
     display: flex;
     align-items: center;
     padding: 0px 20px;
@@ -58,7 +56,6 @@ form{
     position: relative;
     font-weight: 600;
     font-size: 16px;
-    box-shadow: 0px 0px 6px lightgray;
     border-radius: 5px;
 
     button{
@@ -77,7 +74,6 @@ form{
         flex-direction: column;
         width: 100%;
         text-align: left;
-        box-shadow: 0px 0px 6px lightgray;
         border-radius: 5px;
         display: none;
 
