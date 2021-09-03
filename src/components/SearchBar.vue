@@ -34,7 +34,7 @@ export default {
 
 form{
     width: 35%;
-    background: #FFFFFF;
+    background: inherit;
     margin-right: 20px;
     box-shadow: 0px 0px 6px lightgray;
     display: flex;
@@ -62,7 +62,6 @@ form{
     border-radius: 5px;
 
     button{
-        background: #FFFFFF;
         padding: 15px 20px;
         width: 200px;
         display: flex;
@@ -74,7 +73,6 @@ form{
     .dropdown-content{
         position: absolute;
         top:55px;
-        background: #FFFFFF;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -86,10 +84,6 @@ form{
         a{
             width: 100%;
             padding: 10px 20px;
-
-            &:hover{
-                background:hsl(0, 0%, 98%) ;
-            }
         }
 
     }

@@ -53,7 +53,6 @@ section{
     box-shadow: 0px 0px 6px lightgray;
     border-radius: 10px;
     margin-bottom: 50px;
-    text-align: left;
 
     ul{
       padding: 20px;
@@ -61,6 +60,12 @@ section{
         margin-bottom: 20px;
       }
     }
+  }
+}
+@media screen and (max-width:1024px){
+  .card{
+    width:90%;
+    background: red;
   }
 }
 </style>

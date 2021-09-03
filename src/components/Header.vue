@@ -17,9 +17,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #FFFFFF;
   padding: 20px 5%;
-  box-shadow: 0px 6px 6px lightgray;
 
   button{
     background: inherit;
