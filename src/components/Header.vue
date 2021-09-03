@@ -1,7 +1,9 @@
 <template>
   <div class="header">
     <h1>Where in the world?</h1>
-    <button type="button"><i class="far fa-moon"></i> Dark Mode</button>
+    <button @click="$emit('mode')" type="button">
+      <i class="far fa-moon"></i> Dark Mode
+    </button>
   </div>
 </template>
 
