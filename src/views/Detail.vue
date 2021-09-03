@@ -54,11 +54,9 @@ export default {
 
 <style lang="scss" scoped>
 #back{
-  background: #FFFFFF;
   padding: 15px 20px;
   font-weight: 600;
   font-size: 16px;
-  box-shadow: 0px 0px 6px lightgray;
   border-radius: 5px;
   text-align: center;
   vertical-align: center;
@@ -76,7 +74,6 @@ section{
 
   #flag{
     width: 46%;
-    box-shadow: 0px 0px 6px lightgray;
   }
   #country-details{
     width: 48%;

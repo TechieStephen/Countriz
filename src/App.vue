@@ -1,6 +1,6 @@
 <template>
-  <div id="wrapper" class="dark">
-    <Header/>
+  <div id="wrapper" :class="{'dark':mode}">
+    <Header @mode="changeMode"/>
     <main>
       <router-view/>
     </main>
@@ -14,6 +14,11 @@ export default {
   data(){
     return{
       mode:false
+    }
+  },
+  methods:{
+    changeMode(){
+      this.mode = !this.mode
     }
   }
 }
@@ -40,7 +45,7 @@ body{
   font-size: 16px;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $LightModeText;
@@ -74,17 +79,28 @@ ul{
 main{
   padding: 50px 5%;
 }
-.header,button, select, input, form, .dropdown, .dropdown-content, .card{
+//Light Mode Setup
+.header,button, select, input, form, 
+.dropdown, .dropdown-content, .card, #back, #flag{
+  background: #FFFFFF;
+  color: $LightModeText;
+}
+
+.header, form, 
+.dropdown, .dropdown-content, .card, #back, #flag{
   box-shadow: 0px 0px 6px lightgray;
 }
 
+//Light Mode Setup
 .dark{
-  color: $DarkModeText;
   background: $DarkModeBackground;
-
-  .header,button, select, input, form, .dropdown, .dropdown-content, .card{
+  color: $DarkModeText;
+  
+  .header,button, select, input, form,
+  .dropdown, .dropdown-content, .card, #back, #flag{
     background: $DarkModeElements;
     box-shadow: none;
+    color: $DarkModeText;
   }
 }
 </style>
