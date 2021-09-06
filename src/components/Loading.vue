@@ -3,8 +3,6 @@
 </template>
 
 <style lang="scss" scoped>
-
-</style>>
 #loading{
   margin-top: 80px;
   font-size: 20px;
