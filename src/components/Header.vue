@@ -27,7 +27,6 @@ export default {
 
   button{
     user-select: none;
-    font-size: .5em;
   }
 
 }
