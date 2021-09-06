@@ -41,7 +41,6 @@ form{
     border-radius: 5px;
 
     i{
-        color: rgb(119, 119, 119);
         margin-right:5px;
     }
 
@@ -87,5 +86,26 @@ form{
     &:hover .dropdown-content{
         display: flex;
     }
+}
+
+@media screen and (max-width:900px){
+  #search{
+    flex-direction: column;
+
+    form{
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    .dropdown{
+        width: 100%;
+        margin: 0 auto;
+
+        button{
+        width: 100%;
+    }
+    }
+}
 }
 </style>
