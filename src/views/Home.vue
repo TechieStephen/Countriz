@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Search-bar/>
+    <Search-bar v-on:seachByRegion="filterByRegion"/>
     <section>
        <router-link :to="`/detail/${item.alpha2Code}`" v-for="(item,index) in countries" :key="index" class="card">
          <img id="flag" :src="item.flag" alt="">
@@ -28,13 +28,26 @@ export default {
       countries:[]
     }
   },
+  methods:{
+    getAll(){
+      fetch('https://restcountries.eu/rest/v2/all')
+      .then(res=>res.json())
+      .then(data=>{
+        this.countries = data
+      })
+      .catch(error=>console.log(error))
+    },
+    filterByRegion(region){
+      fetch(`https://restcountries.eu/rest/v2/region/${region}`)
+      .then(res=>res.json())
+      .then(data=>{
+        this.countries = data
+      })
+      .catch(error=>console.log(error))
+    }
+  },
   mounted(){
-    fetch('https://restcountries.eu/rest/v2/all')
-    .then(res=>res.json())
-    .then(data=>{
-      this.countries = data
-    })
-    .catch(error=>console.log(error))
+    this.getAll()
   }
 }
 </script>
