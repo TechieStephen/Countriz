@@ -6,9 +6,9 @@
          <img id="flag" :src="item.flag" alt="">
          <ul id="details">
            <h2>{{item.name}}</h2>
-           <li><b>Population:</b> {{item.population}}</li>
-           <li><b>Region:</b> {{item.region}}</li>
-           <li><b>Capital:</b> {{item.capital}}</li>
+           <li><span>Population:</span> {{item.population}}</li>
+           <li><span>Region:</span> {{item.region}}</li>
+           <li><span>Capital:</span> {{item.capital}}</li>
          </ul>
        </router-link>
     </section>
@@ -54,8 +54,13 @@ section{
 
     ul{
       padding: 20px;
-      h1{
-        margin-bottom: 20px;
+      h2{
+        margin-bottom: 15px;
+      }
+      li{
+        span{
+          font-weight: 600;
+        }
       }
     }
   }
