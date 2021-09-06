@@ -81,10 +81,13 @@ ul{
   list-style: none;
 }
 
+h1, h2{
+  font-size: 1.2em;
+}
+
 main{
   padding: 50px 5%;
 }
-
 
 //Light Mode Setup
 .header,button, select, input, form, 
