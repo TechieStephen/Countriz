@@ -108,4 +108,10 @@ main{
     color: $DarkModeText;
   }
 }
+
+@media (max-width:900px){
+  main{
+  padding: 20px 5%;
+}
+}
 </style>
