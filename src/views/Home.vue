@@ -63,6 +63,7 @@ section{
 @media screen and (max-width:900px){
   section{
     flex-direction: column;
+    margin-top: 40px;
   .card{
     width:100%;
     margin: 0 auto;
