@@ -87,6 +87,7 @@ h1, h2{
 
 main{
   padding: 50px 5%;
+  min-height: 100vh;
 }
 
 //Light Mode Setup
@@ -121,9 +122,6 @@ main{
 @media (max-width:900px){
   button, select, input{
     font-size: 16px;
-  }
-  main{
-    padding: 20px 5%;
   }
 }
 </style>
