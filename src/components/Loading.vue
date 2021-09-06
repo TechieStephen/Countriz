@@ -1,11 +1,13 @@
 <template>
-  <h1 v-if="loading" id="loading">Loading</h1>
+  <h1 id="loading">
+      <i class="fas fa-spinner fa-spin"></i>
+  </h1>
 </template>
 
 <style lang="scss" scoped>
 #loading{
   margin-top: 80px;
-  font-size: 20px;
+  font-size: 50px;
   text-align: center;
 }
 </style>

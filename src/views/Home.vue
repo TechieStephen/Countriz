@@ -1,9 +1,7 @@
 <template>
   <div class="home">
     <Search-bar v-on:searchByRegion="filterByRegion" v-on:search="search"/>
-    <div v-if="loading" id="loading">
-        loading ....
-    </div>
+    <Loading v-if="loading"/>
     <section v-else>
        <router-link :to="`/detail/${item.alpha2Code}`" v-for="(item,index) in countries" :key="index" class="card">
          <img id="flag" :src="item.flag" alt="">
@@ -19,12 +17,14 @@
 </template>
 
 <script>
+import Loading from '../components/Loading.vue'
 import SearchBar from '../components/SearchBar.vue'
 // @ is an alias to /src
 export default {
   name: 'Home',
   components: {
-    SearchBar
+    SearchBar,
+    Loading
   },
   data(){
     return{
@@ -37,8 +37,10 @@ export default {
       fetch('https://restcountries.eu/rest/v2/all')
       .then(res=>res.json())
       .then(data=>{
-        this.countries = data
-        this.loading = false
+        setTimeout(()=>{
+          this.countries = data
+          this.loading = false
+        }, 1000)
       })
       .catch(error=>console.log(error))
     },
