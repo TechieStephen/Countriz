@@ -2,7 +2,7 @@
   <div class="home">
     <Search-bar/>
     <section>
-       <router-link to="/detail" v-for="(item,index) in countries" :key="index" class="card">
+       <router-link :to="`/detail/${item.alpha2Code}`" v-for="(item,index) in countries" :key="index" class="card">
          <img id="flag" :src="item.flag" alt="">
          <ul>
            <h2>{{item.name}}</h2>
