@@ -62,7 +62,7 @@ button, select, input{
   outline: none;
   border: none;
   font-weight: 600;
-  font-size: 1.1em;
+  font-size: 16px;
   font-family: 'Nunito', sans-serif;
   color:inherit;
   background: inherit;
@@ -116,8 +116,11 @@ main{
 }
 
 @media (max-width:900px){
+  button, select, input{
+    font-size: 16px;
+  }
   main{
-  padding: 20px 5%;
-}
+    padding: 20px 5%;
+  }
 }
 </style>
