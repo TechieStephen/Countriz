@@ -41,44 +41,51 @@ $DarkGray : hsl(0, 0%, 52%); //(Light Mode Input)
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
 }
+
 body{
   font-size: 1.1em;
 }
+
 #app {
   font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $LightModeText;
   background: $LightModeBackground;
-  min-height: 100vh;
 }
-
 
 button{
   cursor: pointer;
 }
+
 button, select, input{
   outline: none;
   border: none;
   font-weight: 600;
-  font-size: 17px;
+  font-size: 1.1em;
   font-family: 'Nunito', sans-serif;
   color:inherit;
   background: inherit;
 }
+
 a{
   text-decoration: none;
   color: inherit;
 }
+
 img{
   width: 100%;
 }
+
 ul{
   list-style: none;
 }
+
 main{
   padding: 50px 5%;
 }
+
+
 //Light Mode Setup
 .header,button, select, input, form, 
 .dropdown, .dropdown-content, .card, #back, #flag{
@@ -86,8 +93,7 @@ main{
   color: $LightModeText;
 }
 
-.header, form, 
-.dropdown, .dropdown-content, .card, #back, #flag{
+.header, form, .dropdown, .dropdown-content, .card, #back, #flag{
   box-shadow: 0px 0px 6px lightgray;
 }
 
