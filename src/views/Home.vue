@@ -5,7 +5,7 @@
        <router-link to="/detail" v-for="(item,index) in countries" :key="index" class="card">
          <img id="flag" :src="item.flag" alt="">
          <ul id="details">
-           <h1>{{item.name}}</h1>
+           <h2>{{item.name}}</h2>
            <li><b>Population:</b> {{item.population}}</li>
            <li><b>Region:</b> {{item.region}}</li>
            <li><b>Capital:</b> {{item.capital}}</li>
