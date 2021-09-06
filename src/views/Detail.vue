@@ -128,8 +128,6 @@ section{
         a{
           margin-right: 10px;
           padding: 5px 30px;
-          box-shadow: 0px 0px 6px lightgray;
-          background: #FFFFFF;
           font-size: 15px;
         }
       }

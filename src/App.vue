@@ -92,12 +92,12 @@ main{
 
 //Light Mode Setup
 .header,button, select, input, form, 
-.dropdown, .dropdown-content, .card, #back, #flag{
+.dropdown, .dropdown-content, .card, #back, #flag, #footer a{
   background: #FFFFFF;
   color: $LightModeText;
 }
 
-.header, form, .dropdown, .dropdown-content, .card, #back, #flag{
+.header, form, .dropdown, .dropdown-content, .card, #back, #flag, #footer a{
   box-shadow: 0px 0px 6px lightgray;
 }
 
@@ -108,7 +108,7 @@ main{
   
   .header,button, button:active, select, input, 
   form, .dropdown, .dropdown-content, 
-  .card, #back, #flag{
+  .card, #back, #flag, #footer a{
     background: $DarkModeElements;
     box-shadow: none;
     color: $DarkModeText;
