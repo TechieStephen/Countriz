@@ -125,8 +125,8 @@ section{
         width: 50%;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         a{
-          margin-right: 10px;
           padding: 5px 30px;
           font-size: 15px;
         }
@@ -157,9 +157,18 @@ section{
         align-items: flex-start;
 
         h5{
-        margin: 15px 0px;
+          margin: 15px 0px;
+          width: 100%;
+        }
+        div{
+          width: 100%;
+          flex-wrap: wrap;
+
+          a{
+            margin-bottom: 10px;
+          }
+        }
       }
-       }
     }
   }
 }
