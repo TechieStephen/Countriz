@@ -78,7 +78,7 @@ export default {
 }
 
 section{
-  margin-top: 80px;
+  margin-top: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;

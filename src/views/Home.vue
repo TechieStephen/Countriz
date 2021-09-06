@@ -84,7 +84,7 @@ export default {
 
 <style scoped lang="scss">
 section{
-  margin-top: 80px;
+  margin-top: 70px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
