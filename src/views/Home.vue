@@ -3,7 +3,7 @@
     <Search-bar v-on:searchByRegion="filterByRegion" v-on:search="search"/>
     <div v-if="loading" id="loading">
         loading ....
-      </div>
+    </div>
     <section v-else>
        <router-link :to="`/detail/${item.alpha2Code}`" v-for="(item,index) in countries" :key="index" class="card">
          <img id="flag" :src="item.flag" alt="">
@@ -73,11 +73,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#loading{
-  margin-top: 80px;
-  font-size: 20px;
-  text-align: center;
-}
 section{
   margin-top: 80px;
   display: flex;
