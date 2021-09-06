@@ -2,7 +2,10 @@
   <div id="search">
     <form>
         <i class="fas fa-search"></i>
-        <input type="text" placeholder="Search for a country">
+        <input type="text" 
+        placeholder="Search for a country" 
+        v-model="name"
+        v-on:blur="search">
     </form>
       
     <div class="dropdown">
@@ -21,7 +24,17 @@
 
 <script>
 export default {
- name:'SearchBar'
+ name:'SearchBar',
+ data(){
+     return{
+         name:''
+     }
+ },
+ methods:{
+     search(){
+         this.$emit('search', this.name)
+     }
+ }
 }
 </script>
 
