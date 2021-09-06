@@ -42,7 +42,7 @@ $DarkGray : hsl(0, 0%, 52%); //(Light Mode Input)
   font-family: 'Nunito', sans-serif;
 }
 body{
-  font-size: 16px;
+  font-size: 1.1em;
 }
 #app {
   font-family: 'Nunito', sans-serif;
@@ -61,7 +61,7 @@ button, select, input{
   outline: none;
   border: none;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 17px;
   font-family: 'Nunito', sans-serif;
   color:inherit;
   background: inherit;
@@ -96,10 +96,15 @@ main{
   background: $DarkModeBackground;
   color: $DarkModeText;
   
-  .header,button, select, input, form,
-  .dropdown, .dropdown-content, .card, #back, #flag{
+  .header,button, button:active, select, input, 
+  form, .dropdown, .dropdown-content, 
+  .card, #back, #flag{
     background: $DarkModeElements;
     box-shadow: none;
+    color: $DarkModeText;
+  }
+  
+  input:active, input:focus, input::placeholder{
     color: $DarkModeText;
   }
 }
