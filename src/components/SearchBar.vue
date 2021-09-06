@@ -8,11 +8,11 @@
     <div class="dropdown">
         <button class="dropbtn"><span>Filter by Region</span> &nbsp;<i class="fas fa-angle-down"></i></button>
         <div class="dropdown-content">
-            <a href="#" v-on:click="$emit('seachByRegion', 'africa')">Africa</a>
-            <a href="#" v-on:click="$emit('seachByRegion', 'Americas')">Americas</a>
-            <a href="#" v-on:click="$emit('seachByRegion', 'asia')">Asia</a>
-            <a href="#" v-on:click="$emit('seachByRegion', 'europe')">Europe</a>
-            <a href="#" v-on:click="$emit('seachByRegion', 'oceania')">Oceania</a>
+            <a href="#" v-on:click="$emit('searchByRegion', 'africa')">Africa</a>
+            <a href="#" v-on:click="$emit('searchByRegion', 'Americas')">Americas</a>
+            <a href="#" v-on:click="$emit('searchByRegion', 'asia')">Asia</a>
+            <a href="#" v-on:click="$emit('searchByRegion', 'europe')">Europe</a>
+            <a href="#" v-on:click="$emit('searchByRegion', 'oceania')">Oceania</a>
         </div>
     </div>
   </div>
