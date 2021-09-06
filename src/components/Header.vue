@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <h1>Where in the world?</h1>
-    <button @click="$emit('mode')" type="button">
+    <button @click="$emit('mode')" type="button" id="btn-dark">
       <i class="far fa-moon"></i> Dark Mode
     </button>
   </div>
@@ -22,7 +22,8 @@ export default {
   padding: 20px 5%;
 
   button{
-    background: inherit;
+    user-select: none;
   }
+
 }
 </style>
