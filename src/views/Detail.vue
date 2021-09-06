@@ -83,11 +83,11 @@ section{
   align-items: center;
 
   #flag{
-    width: 46%;
+    width: 30%;
   }
 
   #country-details{
-    width: 48%;
+    width: 60%;
 
     #details{
       display: flex;
@@ -95,8 +95,7 @@ section{
       margin: 20px 0px;
 
       ul:first-child{
-        width: 50%;
-        margin-right: 25px;
+        margin-right: 5%;
       }
 
       ul{
