@@ -1,7 +1,10 @@
 <template>
   <div class="home">
     <Search-bar v-on:searchByRegion="filterByRegion" v-on:search="search"/>
-    <section>
+    <div v-if="loading" id="loading">
+        loading ....
+      </div>
+    <section v-else>
        <router-link :to="`/detail/${item.alpha2Code}`" v-for="(item,index) in countries" :key="index" class="card">
          <img id="flag" :src="item.flag" alt="">
          <ul>
@@ -25,7 +28,8 @@ export default {
   },
   data(){
     return{
-      countries:[]
+      countries:[],
+      loading:true
     }
   },
   methods:{
@@ -34,9 +38,11 @@ export default {
       .then(res=>res.json())
       .then(data=>{
         this.countries = data
+        this.loading = false
       })
       .catch(error=>console.log(error))
     },
+
     filterByRegion(region){
       fetch(`https://restcountries.eu/rest/v2/region/${region}`)
       .then(res=>res.json())
@@ -47,12 +53,17 @@ export default {
     },
 
     search(name){
-      fetch(`https://restcountries.eu/rest/v2/name/${name}`)
-      .then(res=>res.json())
-      .then(data=>{
-        this.countries = data
-      })
-      .catch(error=>console.log(error))
+      if(name == ""){
+        this.getAll()
+      }else{
+        fetch(`https://restcountries.eu/rest/v2/name/${name}`)
+          .then(res=>res.json())
+          .then(data=>{
+            this.countries = data
+          })
+        .catch(error=>console.log(error))
+      }
+      
     }
   },
   mounted(){
@@ -62,6 +73,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+#loading{
+  margin-top: 80px;
+  font-size: 20px;
+  text-align: center;
+}
 section{
   margin-top: 80px;
   display: flex;
