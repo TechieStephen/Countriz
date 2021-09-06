@@ -60,10 +60,14 @@ section{
     }
   }
 }
-@media screen and (max-width:1024px){
+@media screen and (max-width:900px){
+  section{
+    flex-direction: column;
   .card{
-    width:90%;
-    background: red;
+    width:100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
   }
 }
 </style>
