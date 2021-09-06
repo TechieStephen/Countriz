@@ -34,8 +34,10 @@
 
       <div id="footer">
         <h5>Bordered Countries:</h5>
+        <div>
           <router-link  to="/" v-for="(item,index) in country.borders" :key="index"> {{item}}, 
           </router-link>
+        </div>
       </div>
     </div>
   </section>
@@ -112,6 +114,23 @@ section{
     #footer{
       margin-top: 40px;
       display: flex;
+      align-items: center;
+
+      h5{
+        margin-right: 5%;
+      }
+      div{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        a{
+          margin-right: 10px;
+          padding: 5px 30px;
+          box-shadow: 0px 0px 6px lightgray;
+          background: #FFFFFF;
+          font-size: 15px;
+        }
+      }
     }
   }
 
