@@ -47,19 +47,23 @@ export default {
 
     filterByRegion(region){
       this.loading = true
-      fetch(`https://restcountries.eu/rest/v2/region/${region}`)
-      .then(res=>res.json())
-      .then(data=>{
-        setTimeout(()=>{
-          this.countries = data
-          this.loading = false
-        }, 500)
-      })
-      .catch(error=>console.log(error))
+      if(region == "all"){
+        this.getAll()
+      }else{
+        fetch(`https://restcountries.eu/rest/v2/region/${region}`)
+        .then(res=>res.json())
+        .then(data=>{
+          setTimeout(()=>{
+            this.countries = data
+            this.loading = false
+          }, 500)
+        })
+        .catch(error=>console.log(error))
+      }
     },
 
     search(name){
-          this.loading = true
+        this.loading = true
       if(name == ""){
         this.getAll()
       }else{
