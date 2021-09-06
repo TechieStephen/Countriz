@@ -46,11 +46,10 @@
 <script>
 export default {
   name:'Detail',
-  // props:['code'],
+  props:['code'],
   data(){
     return{
-      country:{},
-      code:'be'
+      country:{}
     }
   },
   mounted(){
