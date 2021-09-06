@@ -90,6 +90,9 @@ section{
   #country-details{
     width: 60%;
 
+    h1{
+      margin: 20px 0px;
+    }
     #details{
       display: flex;
       justify-content: flex-start;
@@ -102,7 +105,7 @@ section{
       ul{
         font-size: 16px;
         li{
-          margin: 5px 0px;
+          margin: 8px 0px;
           span{
             font-weight: 600;
           }
@@ -132,6 +135,34 @@ section{
       }
     }
   }
+}
 
+@media (max-width:900px){
+  section{
+    flex-direction: column;
+    #flag{
+      width: 100%;
+    }
+    #country-details{
+      width: 100%;
+      #details{
+        flex-direction: column;
+
+          ul:first-child{
+            margin-right: 0px;
+            margin-bottom: 30px;
+        }
+      }
+
+       #footer{
+        flex-direction: column;
+        align-items: flex-start;
+
+        h5{
+        margin: 15px 0px;
+      }
+       }
+    }
+  }
 }
 </style>
