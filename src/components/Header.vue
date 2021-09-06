@@ -21,6 +21,10 @@ export default {
   align-items: center;
   padding: 20px 5%;
 
+  h1{
+    font-size: 1.5em;
+  }
+
   button{
     user-select: none;
   }
