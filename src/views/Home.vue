@@ -40,28 +40,36 @@ export default {
         setTimeout(()=>{
           this.countries = data
           this.loading = false
-        }, 1000)
+        }, 500)
       })
       .catch(error=>console.log(error))
     },
 
     filterByRegion(region){
+      this.loading = true
       fetch(`https://restcountries.eu/rest/v2/region/${region}`)
       .then(res=>res.json())
       .then(data=>{
-        this.countries = data
+        setTimeout(()=>{
+          this.countries = data
+          this.loading = false
+        }, 500)
       })
       .catch(error=>console.log(error))
     },
 
     search(name){
+          this.loading = true
       if(name == ""){
         this.getAll()
       }else{
         fetch(`https://restcountries.eu/rest/v2/name/${name}`)
           .then(res=>res.json())
           .then(data=>{
-            this.countries = data
+              setTimeout(()=>{
+                this.countries = data
+                this.loading = false
+            }, 500)
           })
         .catch(error=>console.log(error))
       }
