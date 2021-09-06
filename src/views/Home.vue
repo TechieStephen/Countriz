@@ -4,7 +4,7 @@
     <section>
        <router-link to="/detail" v-for="(item,index) in countries" :key="index" class="card">
          <img id="flag" :src="item.flag" alt="">
-         <ul id="details">
+         <ul>
            <h2>{{item.name}}</h2>
            <li><span>Population:</span> {{item.population}}</li>
            <li><span>Region:</span> {{item.region}}</li>
@@ -58,6 +58,8 @@ section{
         margin-bottom: 15px;
       }
       li{
+        font-size: 16px;
+        margin: 5px 0px;
         span{
           font-weight: 600;
         }
