@@ -8,23 +8,34 @@
       <h1>{{country.name}}</h1>
       <div id="details">
         <ul>
-          <li><b>Native Name:</b> {{country.population}}</li>
-          <li><b>Population:</b> {{country.nativeName}}</li>
-          <li><b>Region:</b> {{country.region}}</li>
-          <li><b>Sub Region:</b> {{country.subregion}}</li>
-          <li><b>Capital:</b> {{country.capital}}</li>
+          <li><span>Native Name:</span> {{country.nativeName}}</li>
+          <li><span>Population:</span> {{country.population}}</li>
+          <li><span>Region:</span> {{country.region}}</li>
+          <li><span>Sub Region:</span> {{country.subregion}}</li>
+          <li><span>Capital:</span> {{country.capital}}</li>
         </ul>
         <ul>
-          <li><b>Top Level Domain:</b> {{country.topLevelDomain}}</li>
-          <li><b>Currencies:</b> {{country.currencies}}</li>
-          <li><b>Languages:</b> {{country.languages}}</li>
+          <li>
+            <span>Top Level Domain:</span>&nbsp;
+            <template v-for="(item, index) in country.topLevelDomain" :key="index"> {{item}}</template>
+          </li>
+
+          <li>
+            <span>Currencies:</span>&nbsp;
+            <template v-for="(item, index) in country.currencies" :key="index"> {{item.name}}</template>
+          </li>
+
+          <li>
+            <span>Languages:</span>&nbsp;
+            <template v-for="(item, index) in country.languages" :key="index"> {{item.name}}, </template>
+          </li>
         </ul>
       </div>
+
       <div id="footer">
-        <h3>Bordered Countries:</h3>
-        <a href="" v-for="(item,index) in country.borders" :key="index">
-          {{item}}
-        </a>
+        <h5>Bordered Countries:</h5>
+          <router-link  to="/" v-for="(item,index) in country.borders" :key="index"> {{item}}, 
+          </router-link>
       </div>
     </div>
   </section>
@@ -37,7 +48,7 @@ export default {
   data(){
     return{
       country:{},
-      code:'co'
+      code:'be'
     }
   },
   mounted(){
@@ -56,7 +67,6 @@ export default {
 #back{
   padding: 15px 20px;
   font-weight: 600;
-  font-size: 16px;
   border-radius: 5px;
   text-align: center;
   vertical-align: center;
@@ -75,19 +85,30 @@ section{
   #flag{
     width: 46%;
   }
+
   #country-details{
     width: 48%;
 
-  #details{
-    display: flex;
-    justify-content: flex-start;
-    margin: 20px 0px;
+    #details{
+      display: flex;
+      justify-content: flex-start;
+      margin: 20px 0px;
 
-    ul:first-child{
-      width: 40%;
-      margin-right: 20px;
+      ul:first-child{
+        width: 50%;
+        margin-right: 25px;
+      }
+
+      ul{
+        font-size: 16px;
+        li{
+          margin: 5px 0px;
+          span{
+            font-weight: 600;
+          }
+        }
+      }
     }
-  }
 
     #footer{
       margin-top: 40px;
