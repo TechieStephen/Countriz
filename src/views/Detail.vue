@@ -147,7 +147,7 @@ section{
         align-items: center;
         justify-content: flex-start;
         a{
-          padding: 5px 30px;
+          padding: 5px 15px;
           font-size: 15px;
           margin-right: 20px;
         }
