@@ -1,6 +1,8 @@
 <template>
   <div class="header">
-    <h1>Where in the world?</h1>
+    <router-link to="/">
+      <h1>Where in the world?</h1>
+    </router-link>
     <button @click="$emit('mode')" type="button" id="btn-dark">
       <i class="far fa-moon"></i> Dark Mode
     </button>
