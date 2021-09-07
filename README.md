@@ -10,7 +10,6 @@ This is a solution to the [REST Countries API with color theme switcher challeng
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Project setup](#project-setup)
@@ -45,8 +44,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://os-countries.netlify.app/)
+- Solution URL: [https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca/hub/rest-countries-api-with-color-theme-switcher-pxxDBmKUq](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca/hub/rest-countries-api-with-color-theme-switcher-pxxDBmKUq)
+- Live Site URL: [https://os-countries.netlify.app/](https://os-countries.netlify.app/)
 
 ## My process
 
@@ -59,26 +58,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - [Vue](https://v3.vuejs.org/) - JS library
 - [SCSS](https://sass-lang.com/documentation/syntax) 
 
-
-### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
 
 ### Continued development
 
