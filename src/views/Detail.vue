@@ -1,6 +1,8 @@
 <template>
   <router-link to="/" id="back"> <i class="fas fa-arrow-left"></i> Back</router-link>
-  <section>
+  
+  <Loading v-if="loading"/>
+  <section v-else>
     <div id="flag">
       <img :src="country.flag" alt="">
     </div>
@@ -43,13 +45,16 @@
 </template>
 
 <script>
+import Loading from '../components/Loading.vue'
 export default {
   name:'Detail',
   props:['code'],
+  components:{Loading},
   data(){
     return{
       country:{},
-      borders:[]
+      borders:[],
+      loading: true
     }
   },
   watch:{
@@ -59,11 +64,15 @@ export default {
   },
   methods:{
     getCountryDetail(){
+      this.loading = true
       fetch(`https://restcountries.eu/rest/v2/alpha/${this.code}`)
         .then(res=>res.json())
         .then(data=>{
-          this.country = data
-          this.getBorders()
+          setTimeout(()=>{
+            this.country = data
+            this.loading = true
+            this.getBorders()
+          }, 500)
         })
         .catch(error=>console.log(error))
     },
