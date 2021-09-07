@@ -35,8 +35,7 @@
       <div id="footer">
         <h5>Bordered Countries:</h5>
         <div>
-          <router-link  to="/" v-for="(item,index) in borders" :key="index"> {{item}}, 
-          </router-link>
+          <router-link :to="`/detail/${item.alpha2Code}`" v-for="(item,index) in borders" :key="index"> {{item.name}}</router-link>
         </div>
       </div>
     </div>
@@ -53,18 +52,38 @@ export default {
       borders:[]
     }
   },
-  mounted(){
-    fetch(`https://restcountries.eu/rest/v2/alpha/${this.code}`)
-    .then(res=>res.json())
-    .then(data=>{
-      this.country = data
+  watch:{
+    $route (to, from){
+        console.log(to);
+        console.log(from);
+    },
+    code(){
+        this.getCountryDetail()
+    }
+  },
+  methods:{
+    getCountryDetail(){
+      fetch(`https://restcountries.eu/rest/v2/alpha/${this.code}`)
+        .then(res=>res.json())
+        .then(data=>{
+          this.country = data
+          this.getBorders()
+        })
+        .catch(error=>console.log(error))
+    },
+    getBorders(){
       this.country.borders.forEach(item => {
-        this.borders.push(item)
+        fetch(`https://restcountries.eu/rest/v2/alpha/${item}`)
+          .then(res=>res.json())
+          .then(data=>{
+            this.borders.push(data)
+          })
+          .catch(error=>console.log(error))
       });
-      console.log(data)
-      console.log(this.borders)
-    })
-    .catch(error=>console.log(error))
+    }
+  },
+  created(){
+    this.getCountryDetail()
   }
 }
 </script>
