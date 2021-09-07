@@ -23,5 +23,17 @@ export default {
 <style scoped lang="scss">
 .footer{
   text-align: center;
+
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    li{
+      padding: 5px;
+      margin: 0px 10px;
+    }
+  }
 }
 </style>
