@@ -53,10 +53,6 @@ export default {
     }
   },
   watch:{
-    $route (to, from){
-        console.log(to);
-        console.log(from);
-    },
     code(){
         this.getCountryDetail()
     }
@@ -149,10 +145,11 @@ section{
         width: 50%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         a{
           padding: 5px 30px;
           font-size: 15px;
+          margin-right: 20px;
         }
       }
     }
