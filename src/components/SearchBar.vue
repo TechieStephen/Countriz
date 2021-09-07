@@ -5,7 +5,7 @@
         <input type="text" 
         placeholder="Search for a country" 
         v-model="name"
-        v-on:keyup="search">
+        v-on:keyup.prevent="search">
     </form>
       
     <div class="dropdown">
