@@ -111,7 +111,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## Author
 
 - Website - [Ohien Stephen](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Stephen0009)
+- Frontend Mentor - [@Stephen0009](https://www.frontendmentor.io/profile/Stephen0009)
 - Twitter - [@ohienstephen](https://www.twitter.com/ohienstephen)
 
 
