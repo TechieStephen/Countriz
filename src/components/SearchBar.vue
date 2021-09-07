@@ -1,6 +1,6 @@
 <template>
   <div id="search">
-    <form>
+    <form @submit.prevent="search">
         <i class="fas fa-search"></i>
         <input type="text" 
         placeholder="Search for a country" 
