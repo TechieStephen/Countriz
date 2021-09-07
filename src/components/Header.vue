@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <router-link to="/">
-      <h1>Where in the world? {{mode}}</h1>
+      <h1>Where in the world?</h1>
     </router-link>
     <button @click="$emit('mode')" type="button" id="btn-dark">
       <i :class="{'fas':!mode, 'far':mode}" class="fa-moon"></i> Dark Mode
