@@ -1,9 +1,21 @@
 <template>
   <div class="footer">
     <ul>
-      <li><a href=""><i class="fas fa-user"></i></a></li>
-      <li><a href=""><i class="fas fa-user"></i></a></li>
-      <li><a href=""><i class="fab fa-github"></i></a></li>
+      <li>
+        <a href="https://www.twitter.com/ohienstephen">
+          <i class="fas fa-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/ohienstephen">
+          <i class="fas fa-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/ohienstephen">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
     </ul>
     <p>
       Challenge by 
@@ -33,6 +45,12 @@ export default {
     li{
       padding: 5px;
       margin: 0px 10px;
+    }
+  }
+
+  p{
+    a{
+      font-weight: bold;
     }
   }
 }
