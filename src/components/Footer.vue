@@ -3,17 +3,17 @@
     <ul>
       <li>
         <a href="https://www.twitter.com/ohienstephen">
-          <i class="fas fa-twitter"></i>
+          <i class="fab fa-twitter-square"></i>
         </a>
       </li>
       <li>
         <a href="https://www.facebook.com/ohienstephen">
-          <i class="fas fa-facebook"></i>
+          <i class="fab fa-facebook-square"></i>
         </a>
       </li>
       <li>
         <a href="https://github.com/ohienstephen">
-          <i class="fab fa-github"></i>
+          <i class="fab fa-github-square"></i>
         </a>
       </li>
     </ul>
@@ -35,6 +35,7 @@ export default {
 <style scoped lang="scss">
 .footer{
   text-align: center;
+  padding: 10px 5%;
 
   ul{
     display: flex;
@@ -45,6 +46,12 @@ export default {
     li{
       padding: 5px;
       margin: 0px 10px;
+      a{
+        font-size: 16px;
+        i{
+          font-size: 30px;
+        }
+      }
     }
   }
 
