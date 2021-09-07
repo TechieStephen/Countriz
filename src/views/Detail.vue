@@ -35,7 +35,7 @@
       <div id="footer">
         <h5>Bordered Countries:</h5>
         <div>
-          <router-link  to="/" v-for="(item,index) in country.borders" :key="index"> {{item}}, 
+          <router-link  to="/" v-for="(item,index) in borders" :key="index"> {{item}}, 
           </router-link>
         </div>
       </div>
@@ -49,7 +49,8 @@ export default {
   props:['code'],
   data(){
     return{
-      country:{}
+      country:{},
+      borders:[]
     }
   },
   mounted(){
@@ -57,7 +58,11 @@ export default {
     .then(res=>res.json())
     .then(data=>{
       this.country = data
+      this.country.borders.forEach(item => {
+        this.borders.push(item)
+      });
       console.log(data)
+      console.log(this.borders)
     })
     .catch(error=>console.log(error))
   }
