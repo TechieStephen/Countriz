@@ -70,8 +70,8 @@ export default {
         .then(data=>{
           setTimeout(()=>{
             this.country = data
-            this.loading = true
             this.getBorders()
+            this.loading = false
           }, 500)
         })
         .catch(error=>console.log(error))
