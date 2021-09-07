@@ -1,6 +1,6 @@
 <template>
   <div id="wrapper" :class="{'dark':mode}">
-    <Header @mode="changeMode"/>
+    <Header @mode="changeMode" :mode="mode"/>
     <main>
       <router-view/>
     </main>
@@ -25,6 +25,7 @@ export default {
   }
 }
 </script>
+
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap');
 
