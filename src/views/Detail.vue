@@ -151,19 +151,59 @@ section{
         margin-right: 5%;
       }
       div{
-        width: 50%;
+        width: 70%;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: flex-start;
         a{
           padding: 5px 15px;
           font-size: 15px;
           margin-right: 20px;
+          margin-bottom: 10px;
         }
       }
     }
   }
 }
+
+// @media (max-width:1200){
+//   section{
+//     flex-direction: column;
+//     #flag{
+//       width: 100%;
+//     }
+//     #country-details{
+//       width: 100%;
+//       #details{
+//         flex-direction: column;
+
+//           ul:first-child{
+//             margin-right: 0px;
+//             margin-bottom: 30px;
+//         }
+//       }
+
+//        #footer{
+//         flex-direction: column;
+//         align-items: flex-start;
+
+//         h5{
+//           margin: 15px 0px;
+//           width: 100%;
+//         }
+//         div{
+//           width: 100%;
+//           flex-wrap: wrap;
+
+//           a{
+//             margin-bottom: 10px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 @media (max-width:900px){
   section{
@@ -192,14 +232,21 @@ section{
         }
         div{
           width: 100%;
-          flex-wrap: wrap;
-
-          a{
-            margin-bottom: 10px;
-          }
         }
       }
     }
   }
 }
 </style>
+
+/*CREATE TABLE students(
+	id INT(11),
+    name VARCHAR(20),
+    class VARCHAR(20)
+);
+
+INSERT INTO students
+VALUES(1,"stephen", "python")
+*/
+
+SELECT * FROM students
