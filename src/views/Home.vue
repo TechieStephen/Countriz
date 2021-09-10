@@ -114,6 +114,14 @@ section{
     }
   }
 }
+@media screen and (max-width:1200px){
+  section{
+    margin-top: 40px;
+    .card{
+      width:30%;
+    }
+  }
+}
 @media screen and (max-width:900px){
   section{
     flex-direction: column;
