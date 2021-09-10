@@ -126,11 +126,11 @@ section{
   section{
     flex-direction: column;
     margin-top: 40px;
-  .card{
-    width:100%;
-    margin: 0 auto;
-    margin-bottom: 50px;
-  }
+    .card{
+      width:100%;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
   }
 }
 </style>
