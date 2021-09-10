@@ -145,7 +145,7 @@ section{
     #footer{
       margin-top: 40px;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
 
       h5{
         margin-right: 5%;
@@ -167,43 +167,6 @@ section{
   }
 }
 
-// @media (max-width:1200){
-//   section{
-//     flex-direction: column;
-//     #flag{
-//       width: 100%;
-//     }
-//     #country-details{
-//       width: 100%;
-//       #details{
-//         flex-direction: column;
-
-//           ul:first-child{
-//             margin-right: 0px;
-//             margin-bottom: 30px;
-//         }
-//       }
-
-//        #footer{
-//         flex-direction: column;
-//         align-items: flex-start;
-
-//         h5{
-//           margin: 15px 0px;
-//           width: 100%;
-//         }
-//         div{
-//           width: 100%;
-//           flex-wrap: wrap;
-
-//           a{
-//             margin-bottom: 10px;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
 
 @media (max-width:900px){
   section{
