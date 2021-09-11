@@ -4,8 +4,8 @@
       <h1>Where in the world?</h1>
     </router-link>
     <button @click="$emit('mode')" type="button" id="btn-dark">
-	<template v-if="!mode"><i class="fas fa-moon"></i> light Mode</template>
-	<template v-else><i class="far fa-moon"></i> Dark Mode</template>
+	<template v-if="!mode"><i class="fas fa-moon"></i> Dark Mode</template>
+	<template v-else><i class="far fa-moon"></i> Light Mode</template>
     </button>
   </div>
 </template>
