@@ -48,7 +48,7 @@ Users should be able to:
 - Flexbox
 - Desktop-first workflow
 - [Vue](https://v3.vuejs.org/) - JS library
-- [SCSS](https://sass-lang.com/documentation/syntax) 
+- [Sass](https://sass-lang.com/documentation/syntax) 
 
 
 ### Continued development
