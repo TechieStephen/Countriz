@@ -90,4 +90,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 Ohien Stephen
 
+**it was fun building!** 🚀
+
 
