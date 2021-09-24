@@ -9,7 +9,7 @@
            <h2>{{item.name.common}}</h2>
            <li><span>Population:</span> {{item.population}}</li>
            <li><span>Region:</span> {{item.region}}</li>
-           <li><span>Capital:</span> {{item.capital}}</li>
+           <li><span>Capital:</span> {{item.capital[0]}}</li>
          </ul>
        </router-link>
     </section>
