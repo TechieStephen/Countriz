@@ -51,7 +51,7 @@ export default {
       if(region == "all"){
         this.getAll()
       }else{
-        fetch(`https://restcountries.com/v3/regionalbloc/${region}`)
+        fetch(`https://restcountries.com/v3/region/${region}`)
         .then(res=>res.json())
         .then(data=>{
           setTimeout(()=>{
@@ -68,7 +68,7 @@ export default {
       if(name == ""){
         this.getAll()
       }else{
-        fetch(`https://restcountries.com/v2/name/${name}`)
+        fetch(`https://restcountries.com/v3/name/${name}`)
           .then(res=>res.json())
           .then(data=>{
               setTimeout(()=>{
