@@ -4,7 +4,7 @@
   <Loading v-if="loading"/>
   <section v-else>
     <div id="flag">
-      <img :src="country.flag" alt="">
+      <img :src="country.flags[0] || country.flags[1]" alt="">
     </div>
     <div id="country-details">
       <h1>{{country.name}}</h1>
@@ -65,7 +65,7 @@ export default {
   methods:{
     getCountryDetail(){
       this.loading = true
-      fetch(`https://restcountries.eu/rest/v2/alpha/${this.code}`)
+      fetch(`https://restcountries.com/v2/alpha/${this.code}`)
         .then(res=>res.json())
         .then(data=>{
           setTimeout(()=>{
