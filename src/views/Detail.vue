@@ -59,17 +59,18 @@ export default {
   },
   watch:{
     code(){
-        this.getCountryDetail()
+        this.getCountryDetails()
     }
   },
   methods:{
-    getCountryDetail(){
+    getCountryDetails(){
       this.loading = true
       fetch(`https://restcountries.com/v3/alpha/${this.code}`)
         .then(res=>res.json())
         .then(data=>{
+          console.log(data)
           setTimeout(()=>{
-            this.country = data
+            // this.country = data
             this.getBorders()
             this.loading = false
           }, 500)
@@ -88,7 +89,7 @@ export default {
     }
   },
   created(){
-    this.getCountryDetail()
+    this.getCountryDetails()
   }
 }
 </script>
