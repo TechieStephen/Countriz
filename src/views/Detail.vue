@@ -77,14 +77,14 @@ export default {
         .catch(error=>console.log(error))
     },
     getBorders(){
-      this.country.borders.forEach(item => {
-        fetch(`https://restcountries.com/v2/alpha/${item}`)
-          .then(res=>res.json())
-          .then(data=>{
-            this.borders.push(data)
-          })
-          .catch(error=>console.log(error))
-      });
+      // this.country.borders.forEach(item => {
+      //   fetch(`https://restcountries.com/v2/alpha/${item}`)
+      //     .then(res=>res.json())
+      //     .then(data=>{
+      //       this.borders.push(data)
+      //     })
+      //     .catch(error=>console.log(error))
+      // });
     }
   },
   created(){
