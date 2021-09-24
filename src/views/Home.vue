@@ -9,6 +9,7 @@
            <h2>{{item.name.common}}</h2>
            <li><span>Population:</span> {{item.population}}</li>
            <li><span>Region:</span> {{item.region}}</li>
+           <!-- <li><span>Capital:</span> {{capital(item)}}</li> -->
            <li><span>Capital:</span> {{item.capital}}</li>
          </ul>
        </router-link>
@@ -30,6 +31,11 @@ export default {
     return{
       countries:[],
       loading:true
+    }
+  },
+  computed:{
+    capital(data){
+      return data.capital[0] || ""
     }
   },
   methods:{
