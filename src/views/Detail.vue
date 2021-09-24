@@ -78,7 +78,7 @@ export default {
     },
     getBorders(){
       this.country.borders.forEach(item => {
-        fetch(`https://restcountries.eu/rest/v2/alpha/${item}`)
+        fetch(`https://restcountries.com/v2/alpha/${item}`)
           .then(res=>res.json())
           .then(data=>{
             this.borders.push(data)
