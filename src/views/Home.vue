@@ -4,7 +4,7 @@
     <Loading v-if="loading"/>
     <section v-else>
        <router-link :to="`/detail/${item.alpha2Code}`" v-for="(item,index) in countries" :key="index" class="card">
-         <img id="flag" :src="item.flag" alt="">
+         <img id="flag" :src="item.flags[0]" alt="">
          <ul>
            <h2>{{item.name}}</h2>
            <li><span>Population:</span> {{item.population}}</li>
@@ -50,7 +50,7 @@ export default {
       if(region == "all"){
         this.getAll()
       }else{
-        fetch(`https://restcountries.eu/rest/v2/region/${region}`)
+        fetch(`https://restcountries.com/v2/region/${region}`)
         .then(res=>res.json())
         .then(data=>{
           setTimeout(()=>{
@@ -67,7 +67,7 @@ export default {
       if(name == ""){
         this.getAll()
       }else{
-        fetch(`https://restcountries.eu/rest/v2/name/${name}`)
+        fetch(`https://restcountries.com/v2/name/${name}`)
           .then(res=>res.json())
           .then(data=>{
               setTimeout(()=>{
