@@ -3,13 +3,13 @@
     <Search-bar v-on:searchByRegion="filterByRegion" v-on:search="search"/>
     <Loading v-if="loading"/>
     <section v-else>
-       <router-link :to="`/detail/${item.cca2}`" v-for="(item,index) in countries" :key="index" class="card">
+       <router-link to="`/details/${item.cca2}`" v-for="item,index in countries" :key="index" class="card">
          <img id="flag" :src="item.flags[0] || item.flags[1]" alt="">
          <ul>
            <h2>{{item.name.common}}</h2>
            <li><span>Population:</span> {{item.population}}</li>
            <li><span>Region:</span> {{item.region}}</li>
-           <li><span>Capital:</span> {{item.capital[0]}}</li>
+           <li><span>Capital:</span> {{item.capital}}</li>
          </ul>
        </router-link>
     </section>
@@ -37,6 +37,7 @@ export default {
       fetch('https://restcountries.com/v3/all')
       .then(res=>res.json())
       .then(data=>{
+        console.log(data)
         setTimeout(()=>{
           this.countries = data
           this.loading = false
