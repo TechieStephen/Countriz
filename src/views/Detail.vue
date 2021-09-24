@@ -65,27 +65,28 @@ export default {
   methods:{
     getCountryDetails(){
       this.loading = true
-      fetch(`https://restcountries.com/v3/alpha/${this.code}`)
+      fetch(`https://restcountries.com/v2/alpha/${this.code}`)
         .then(res=>res.json())
         .then(data=>{
           console.log(data)
           setTimeout(()=>{
-            // this.country = data
+            this.country = data
             this.getBorders()
             this.loading = false
-          }, 500)
+          }, 100)
         })
         .catch(error=>console.log(error))
     },
     getBorders(){
-      // this.country.borders.forEach(item => {
-      //   fetch(`https://restcountries.com/v2/alpha/${item}`)
-      //     .then(res=>res.json())
-      //     .then(data=>{
-      //       this.borders.push(data)
-      //     })
-      //     .catch(error=>console.log(error))
-      // });
+      this.country.borders.forEach(item => {
+        console.log(item)
+        fetch(`https://restcountries.com/v2/alpha/${item}`)
+          .then(res=>res.json())
+          .then(data=>{
+            this.borders.push(data)
+          })
+          .catch(error=>console.log(error))
+      });
     }
   },
   created(){
