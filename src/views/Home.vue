@@ -47,10 +47,11 @@ export default {
 
     filterByRegion(region){
       this.loading = true
+      console.log(region)
       if(region == "all"){
         this.getAll()
       }else{
-        fetch(`https://restcountries.com/v2/region/${region}`)
+        fetch(`https://restcountries.com/v2/regionalbloc/${region}`)
         .then(res=>res.json())
         .then(data=>{
           setTimeout(()=>{
