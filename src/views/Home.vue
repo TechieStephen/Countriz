@@ -34,7 +34,7 @@ export default {
   },
   methods:{
     getAll(){
-      fetch('https://restcountries.com/v2/all')
+      fetch('https://restcountries.com/v3/all')
       .then(res=>res.json())
       .then(data=>{
         setTimeout(()=>{
@@ -51,7 +51,7 @@ export default {
       if(region == "all"){
         this.getAll()
       }else{
-        fetch(`https://restcountries.com/v2/regionalbloc/${region}`)
+        fetch(`https://restcountries.com/v3/regionalbloc/${region}`)
         .then(res=>res.json())
         .then(data=>{
           setTimeout(()=>{
