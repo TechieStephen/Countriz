@@ -65,7 +65,7 @@ export default {
   methods:{
     getCountryDetail(){
       this.loading = true
-      fetch(`https://restcountries.com/v2/alpha/${this.code}`)
+      fetch(`https://restcountries.com/v3/alpha/${this.code}`)
         .then(res=>res.json())
         .then(data=>{
           setTimeout(()=>{
