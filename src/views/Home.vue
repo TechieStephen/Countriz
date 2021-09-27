@@ -7,10 +7,15 @@
          <img id="flag" :src="item.flags[0] || item.flags[1]" alt="">
          <ul>
            <h2>{{item.name.common}}</h2>
-           <li><span>Population:</span> {{item.population}}</li>
+           <li><span>Population:</span>{{item.population}}</li>
            <li><span>Region:</span> {{item.region}}</li>
            <!-- <li><span>Capital:</span> {{capital(item)}}</li> -->
-           <li><span>Capital:</span> {{item.capital}}</li>
+           <li>
+             <span>Capital:</span>
+            <template v-for="(x, i) in item.capital" :key="i">
+              {{x}}
+            </template>
+           </li>
          </ul>
        </router-link>
     </section>
