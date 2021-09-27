@@ -7,7 +7,7 @@
          <img id="flag" :src="item.flags[0] || item.flags[1]" alt="">
          <ul>
            <h2>{{item.name}}</h2>
-           <li><span>Population:</span>{{item.population}}</li>
+           <li><span>Population:</span> {{item.population}}</li>
            <li><span>Region:</span> {{item.region}}</li>
            <li><span>Capital:</span> {{item.capital}}</li>
          </ul>
