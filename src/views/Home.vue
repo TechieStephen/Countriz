@@ -9,13 +9,7 @@
            <h2>{{item.name.common}}</h2>
            <li><span>Population:</span>{{item.population}}</li>
            <li><span>Region:</span> {{item.region}}</li>
-           <!-- <li><span>Capital:</span> {{capital(item)}}</li> -->
-           <li>
-             <span>Capital:</span>
-            <template v-for="(x, i) in item.capital" :key="i">
-              {{x}}
-            </template>
-           </li>
+           <li><span>Capital:</span> {{item.capital}}</li>
          </ul>
        </router-link>
     </section>
@@ -38,14 +32,9 @@ export default {
       loading:true
     }
   },
-  computed:{
-    capital(data){
-      return data.capital[0] || ""
-    }
-  },
   methods:{
     getAll(){
-      fetch('https://restcountries.com/v3/all')
+      fetch('https://restcountries.com/v2/all')
       .then(res=>res.json())
       .then(data=>{
         console.log(data)
@@ -63,7 +52,7 @@ export default {
       if(region == "all"){
         this.getAll()
       }else{
-        fetch(`https://restcountries.com/v3/region/${region}`)
+        fetch(`https://restcountries.com/v2/continent/${region}`)
         .then(res=>res.json())
         .then(data=>{
           setTimeout(()=>{
