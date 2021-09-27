@@ -3,7 +3,7 @@
     <Search-bar v-on:searchByRegion="filterByRegion" v-on:search="search"/>
     <Loading v-if="loading"/>
     <section v-else>
-       <router-link to="`/details/${item.cca2}`" v-for="item,index in countries" :key="index" class="card">
+       <router-link :to="`/details/${item.alpha2Code}`" v-for="item,index in countries" :key="index" class="card">
          <img id="flag" :src="item.flags[0] || item.flags[1]" alt="">
          <ul>
            <h2>{{item.name}}</h2>
