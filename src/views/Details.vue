@@ -37,7 +37,7 @@
       <div id="footer">
         <h5>Bordered Countries:</h5>
         <div>
-          <router-link :to="`/detail/${item.alpha2Code}`" v-for="(item,index) in borders" :key="index"> {{item.name}}</router-link>
+          <router-link :to="`/details/${item.alpha2Code}`" v-for="(item,index) in borders" :key="index"> {{item.name}}</router-link>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@
 <script>
 import Loading from '../components/Loading.vue'
 export default {
-  name:'Detail',
+  name:'Details',
   props:['code'],
   components:{Loading},
   data(){
@@ -68,7 +68,6 @@ export default {
       fetch(`https://restcountries.com/v2/alpha/${this.code}`)
         .then(res=>res.json())
         .then(data=>{
-          console.log(data)
           setTimeout(()=>{
             this.country = data
             this.getBorders()
@@ -79,7 +78,6 @@ export default {
     },
     getBorders(){
       this.country.borders.forEach(item => {
-        console.log(item)
         fetch(`https://restcountries.com/v2/alpha/${item}`)
           .then(res=>res.json())
           .then(data=>{
