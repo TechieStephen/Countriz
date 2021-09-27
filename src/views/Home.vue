@@ -37,7 +37,6 @@ export default {
       fetch('https://restcountries.com/v2/all')
       .then(res=>res.json())
       .then(data=>{
-        console.log(data)
         setTimeout(()=>{
           this.countries = data
           this.loading = false
@@ -48,7 +47,6 @@ export default {
 
     filterByRegion(region){
       this.loading = true
-      console.log(region)
       if(region == "all"){
         this.getAll()
       }else{
