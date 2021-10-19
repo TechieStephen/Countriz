@@ -100,6 +100,10 @@ section{
     border-radius: 10px;
     margin-bottom: 50px;
 
+    #flag{
+      width: 100%;
+      height: 200px;
+    }
     ul{
       padding: 20px;
       h2{
@@ -131,6 +135,11 @@ section{
       width:100%;
       margin: 0 auto;
       margin-bottom: 50px;
+
+      #flag{
+      width: 100%;
+      height: auto;
+    }
     }
   }
 }
